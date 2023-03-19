@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="./src/index.js"></script>
+</head>
+
+<body class="body">
+  <!-- начал 20.02 в 22.00 
+  верстка первой страницы закончена 21.02 в 2.00 / потратил 2 часа. работает слайдер и дропдаун
+ 21.02 сел в 22.00 закончил 22.02 в 1.20 сделал выпадающее меню в навигации
+ 22.02 в 23.00 сел. сделал открытие поле поиска (лупа). стилизация кнопок через бутстрап. Настройка дропдауна навигации.
+ начал "уроки". закончил 23.02 в 3.00 сделал блок фильтр
+ 02.03 сел в 23.00 доделал страницу список уроков. Поставил hover через js. бэкграунд с затемнением. 
+
+
+-->
+  <header class="header">
+    <div class="container">
+      <div class="header-inner navbar row">
+        <ul class="nav nav-pills col-5">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="dropdownMenuClickableInside" data-bs-toggle="dropdown"
+              data-bs-auto-close="outside" aria-expanded="false">Уроки</a>
+            <div class="dropdown-menu  dropdown-width " aria-labelledby="dropdownMenuClickableInside">
+              <div class="row dropdown-row">
+                <ul class="col-3 ">
+                  <h4 class="dropdown-item-title">Продолжительность</h4>
+                  <li class="dropdown-item dropdown-item-text ">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      &lt 15 Минут
+                    </label>
+                  </li>
+
+                  <li class="dropdown-item dropdown-item-text">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      15-30 Минут
+                    </label>
+                  </li>
+
+                  <li class="dropdown-item dropdown-item-text">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      30-45 Минут
+                    </label>
+                  </li>
+
+                  <li class="dropdown-item dropdown-item-text">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      &gt 60 Минут
+                    </label>
+                  </li>
+
+                </ul>
+                <ul class="col-3">
+                  <h4 class="dropdown-item-title">Уровень сложности</h4>
+                  <li class=" dropdown-item dropdown-item-text"><a class="nav-link list-link"
+                      href="./lesson.html">Новичок</a></li>
+                  <li class="dropdown-item dropdown-item-text"><a class="nav-link list-link"
+                      href="./lesson.html">Начинающий</a></li>
+                  <li class="dropdown-item dropdown-item-text"><a class="nav-link list-link"
+                      href="./lesson.html">Средний</a></li>
+                  <li class="dropdown-item dropdown-item-text"><a class="nav-link list-link"
+                      href="./lesson.html">Сложный</a></li>
+                </ul>
+                <ul class="col-2">
+                  <h4 class="dropdown-item-title">Тип йоги</h4>
+                  <li class="dropdown-item dropdown-item-text"><a class="nav-link list-link"
+                      href="./lesson.html">Хатха</a></li>
+                  <li class="dropdown-item dropdown-item-text"><a class="nav-link list-link"
+                      href="./lesson.html">Виньяса</a></li>
+                  <li class="dropdown-item dropdown-item-text"><a class="nav-link list-link"
+                      href="./lesson.html">Кундалини</a></li>
+                  <li class="dropdown-item dropdown-item-text"><a class="nav-link list-link"
+                      href="./lesson.html">Медитация</a></li>
+                </ul>
+                <ul class="col-4">
+                  <h4 class="dropdown-item-title">Новое видео</h4>
+                  <div class="new-video ">
+                    <button class="nav-link "><img class="video-btn" src="./img/play.png" alt=""></button>
+                    <p class="video-text video-name">Кундалини</p>
+                    <p class="video-text video-time">20 мин</p>
+
+                  </div>
+                </ul>
+              </div>
+            </div>
+
+
+
+
+
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+              aria-expanded="false">Программа</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Separated link</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Инструкторы</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Тарифы</a>
+          </li>
+
+        </ul>
+
+
+        <a href="./index.html" class="col-2 logo">
+          <img src="./img/logo.svg" alt="">
+        </a>
+
+        <ul class="nav nav-pills col-5 nav-right">
+          <li class="nav-item nav-item-right ">
+            <input type="text" name="" id="" placeholder="Поиск" class="form-control input-search">
+            <button class="btn btn-header  header-search"></button>
+          </li>
+          <li class="nav-item nav-item-right">
+            <button class="btn  btn-header header-like"></button>
+          </li>
+          <li class="nav-item nav-item-right">
+            <a class="nav-link" href="#">Личный кабинет</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-container  container">
+      <div class="hero-content">
+        <h1 class="h1">ОНЛАЙН БИБЛИОТЕКА ЙОГИ</h1>
+        <button class="btn btn-primary hero-btn">Начать бесплатный урок</button>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="health">
+    <div class="container health-containe">
+      <h2 class="h2 health-title">
+        ЗДОРОВОЕ ТЕЛО И ГАРМОНИЯ ПОВСЮДУ
+      </h2>
+
+      <div class="health-card-block">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+
+          <div class="col">
+            <div class="card h-100">
+              <img src="./img/health-1.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Фиксированная стоимость подписки</h5>
+                <p class="card-text">Занимайтесь йогой в удовольствие и без лишних трат</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="./img/health-2.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Фиксированная стоимость подписки</h5>
+                <p class="card-text">Занимайтесь йогой в удовольствие и без лишних трат</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="./img/health-3.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Фиксированная стоимость подписки</h5>
+                <p class="card-text">Занимайтесь йогой в удовольствие и без лишних трат</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="./img/health-4.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Фиксированная стоимость подписки</h5>
+                <p class="card-text">Занимайтесь йогой в удовольствие и без лишних трат</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="program">
+    <div class="container program-containe">
+      <div class="row">
+        <div class="col">
+          <div class="program-left">
+
+            <h2 class="program-title">ВЫБЕРИ ПРОГРАММУ, КОТОРАЯ ПОДХОДИТ ИМЕННО ТЕБЕ</h2>
+            <p class="program-text">На aiogi ты найдешь комплексные программы в зависимости от твоего направления и
+              уровня
+            </p>
+            <button class="button btn-primary btn-program">Выбрать программу</button>
+          </div>
+        </div>
+        <div class="col">
+          <img src="./img/program.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="staff">
+    <div class="container staff-contane">
+      <h2 class="staff-title">ДОВЕРЬСЯ ЭКСПЕРТАМ СВОЕГО ДЕЛА</h2>
+      <p class="staff-text">Занимайся с лучшими инструкторами по всему миру. Наши преподователи помогут тебе наработать
+        новые навыки, улучшить твою практику йоги и достигнуть поставленных целей. И всегда с позитивным настроем!</p>
+
+
+      <div id="carouselExampleControls" class="carousel slide" data-bs-interval="false">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="health-card-block">
+              <div class="row row-cols-1 row-cols-md-4 g-4">
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="./img/staff-1.jpg" class="card-img-top card-img-staff" alt="...">
+                    <div class="card-body card-body-staff">
+                      <h5 class="card-title card-title-staff">Резеда Анамова</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="./img/staff-2.jpg" class="card-img-top card-img-staff" alt="...">
+                    <div class="card-body card-body-staff">
+                      <h5 class="card-title card-title-staff">Ирина Плотникова</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="./img/staff-3.jpg" class="card-img-top card-img-staff" alt="...">
+                    <div class="card-body card-body-staff">
+                      <h5 class="card-title card-title-staff">Степан Чекменёв</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="./img/staff-4.jpg" class="card-img-top card-img-staff" alt="...">
+                    <div class="card-body card-body-staff">
+                      <h5 class="card-title card-title-staff">Марина Пастухова</h5>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="health-card-block">
+              <div class="row row-cols-1 row-cols-md-4 g-4">
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="./img/staff-1.jpg" class="card-img-top card-img-staff" alt="...">
+                    <div class="card-body card-body-staff">
+                      <h5 class="card-title card-title-staff">Резеда Анамова</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="./img/staff-2.jpg" class="card-img-top card-img-staff" alt="...">
+                    <div class="card-body card-body-staff">
+                      <h5 class="card-title card-title-staff">Ирина Плотникова</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="./img/staff-3.jpg" class="card-img-top card-img-staff" alt="...">
+                    <div class="card-body card-body-staff">
+                      <h5 class="card-title card-title-staff">Степан Чекменёв</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="./img/staff-4.jpg" class="card-img-top card-img-staff" alt="...">
+                    <div class="card-body card-body-staff">
+                      <h5 class="card-title card-title-staff">Марина Пастухова</h5>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+  </section>
+
+  <section class="subscr">
+    <div class="container subscr-containe">
+      <div class="row">
+        <div class="col">
+          <img src="./img/subscr.jpg" alt="">
+        </div>
+        <div class="col subscr-right">
+          <h2 class="subscr-title">ГОТОВЫ ПОГРУЗИТЬСЯ В МИР aiogi?</h2>
+          <p class="subscr-text">Неограниченный доступ к библиотеке от 700 рублей в месяц.
+            Отменить подписку можно в любой момент
+          </p>
+          <button class="button btn-primary btn-subscr">Оформить подписку</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-containe">
+        <div class="footer-left">
+          <div class="footer-left-top">
+            <div class="footer-link">
+              <a href="" class="nav-link foot-link">Обратная связь</a>
+              <a href="" class="nav-link foot-link">Условия пользования</a>
+            </div>
+            <p class="footer-descr">© 2020 aiogi. Все права защищены</p>
+          </div>
+          <div class="footer-left-bottom">
+            <a href="" class="footer-social footer-social-1">
+              <img src="./img/footer-1.png" alt="">
+            </a>
+            <a href="" class="footer-social footer-social-2"><img src="./img/footer-2.png" alt=""></a>
+            <a href="" class="footer-social footer-social-3"><img src="./img/footer-3.png" alt=""></a>
+          </div>
+        </div>
+
+        <div class="footer-right">
+          <h3 class="footer-title">Подписаться на рассылку</h3>
+          <p class="footer-text">Будь в курсе самых последний обновлений</p>
+          <form action="">
+            <input type="text" name="" id="" class="footer-input" placeholder="Email">
+            <button class="button btn-primary button-footer">Подписаться</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

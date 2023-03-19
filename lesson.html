@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="./src/index.js"></script>
+</head>
+
+<body class="body">
+  <!-- начал 20.02 в 22.00 
+  верстка первой страницы закончена 21.02 в 2.00 / потратил 2 часа. работает слайдер и дропдаун
+ 21.02 сел в 22.00 закончил 22.02 в 1.20 сделал выпадающее меню в навигации-->
+  <header class="header">
+    <div class="container">
+      <div class="header-inner navbar row">
+        <ul class="nav nav-pills col-5">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="dropdownMenuClickableInside" data-bs-toggle="dropdown"
+              data-bs-auto-close="outside" aria-expanded="false">Уроки</a>
+            <div class="dropdown-menu  dropdown-width " aria-labelledby="dropdownMenuClickableInside">
+              <div class="row dropdown-row">
+                <ul class="col-3 ">
+                  <h4 class="dropdown-item-title">Продолжительность</h4>
+                  <li class="dropdown-item dropdown-item-text ">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      &lt 15 Минут
+                    </label>
+                  </li>
+
+                  <li class="dropdown-item dropdown-item-text">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      15-30 Минут
+                    </label>
+                  </li>
+
+                  <li class="dropdown-item dropdown-item-text">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      30-45 Минут
+                    </label>
+                  </li>
+
+                  <li class="dropdown-item dropdown-item-text">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      &gt 60 Минут
+                    </label>
+                  </li>
+
+                </ul>
+                <ul class="col-3">
+                  <h4 class="dropdown-item-title">Уровень сложности</h4>
+                  <li class=" dropdown-item dropdown-item-text"><a class="nav-link list-link"
+                      href="./lesson.html">Новичок</a></li>
+                  <li class="dropdown-item dropdown-item-text"><a class="nav-link list-link"
+                      href="./lesson.html">Начинающий</a></li>
+                  <li class="dropdown-item dropdown-item-text"><a class="nav-link list-link"
+                      href="./lesson.html">Средний</a></li>
+                  <li class="dropdown-item dropdown-item-text"><a class="nav-link list-link"
+                      href="./lesson.html">Сложный</a></li>
+                </ul>
+                <ul class="col-2">
+                  <h4 class="dropdown-item-title">Тип йоги</h4>
+                  <li class="dropdown-item dropdown-item-text"><a class="nav-link list-link"
+                      href="./lesson.html">Хатха</a></li>
+                  <li class="dropdown-item dropdown-item-text"><a class="nav-link list-link"
+                      href="./lesson.html">Виньяса</a></li>
+                  <li class="dropdown-item dropdown-item-text"><a class="nav-link list-link"
+                      href="./lesson.html">Кундалини</a></li>
+                  <li class="dropdown-item dropdown-item-text"><a class="nav-link list-link"
+                      href="./lesson.html">Медитация</a></li>
+                </ul>
+                <ul class="col-4">
+                  <h4 class="dropdown-item-title">Новое видео</h4>
+                  <div class="new-video ">
+                    <button class="nav-link "><img class="video-btn" src="./img/play.png" alt=""></button>
+                    <p class="video-text video-name">Кундалини</p>
+                    <p class="video-text video-time">20 мин</p>
+
+                  </div>
+                </ul>
+              </div>
+            </div>
+
+
+
+
+
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+              aria-expanded="false">Программа</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Separated link</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Инструкторы</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Тарифы</a>
+          </li>
+
+        </ul>
+
+        <a href="./index.html" class="col-2 logo">
+          <img src="./img/logo.svg" alt="">
+        </a>
+
+        <ul class="nav nav-pills col-5 nav-right">
+          <li class="nav-item nav-item-right ">
+            <input type="text" name="" id="" placeholder="Поиск" class="form-control input-search">
+            <button class="btn btn-header  header-search"></button>
+          </li>
+          <li class="nav-item nav-item-right">
+            <button class="btn  btn-header header-like"></button>
+          </li>
+          <li class="nav-item nav-item-right">
+            <a class="nav-link" href="#">Личный кабинет</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </header>
+
+
+  <section class="lesson">
+    <div class="container">
+      <div class="row">
+        <div class="col-3 lesson-filter">
+          <h2 class="h2 filter-title">Фильтр</h2>
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  Уровень
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne">
+                <div class="accordion-body">
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Новичок
+                    </label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Начинающий
+                    </label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Средний
+                    </label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Сложный
+                    </label>
+                  </div>
+
+
+
+
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  Тип йоги
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo">
+                <div class="accordion-body">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Хатха
+                    </label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Виньяса
+                    </label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Кундалини
+                    </label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Медитация
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                  Инструктор
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree">
+                <div class="accordion-body">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Резеда Анамова
+
+
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Ольга Ларионова
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Степан Чекменёв
+
+
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Марина Пастухова
+                    </label>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="filter-continius">
+              <h4 class="h4">Продолжительность (мин)</h4>
+              <div class="middle">
+                <div class="multi-range-slider">
+                  <input type="range" id="input-left" min="0" max="80" value="15">
+                  <input type="range" id="input-right" min="0" max="80" value="60">
+
+                  <div class="slider">
+                    <div class="track"></div>
+                    <div class="range"></div>
+                    <div class="thumb left">
+                      <div class="text-range text-range-left">4</div>
+
+                    </div>
+                    <div class="thumb right">
+                      <div class="text-range text-range-right">4</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Бесплатные уроки
+              </label>
+            </div>
+
+
+
+          </div>
+        </div>
+        <div class="col-9 lesson-list">
+          <h2 class="lesson-title">Список уроков</h2>
+
+          <div class="row">
+            <!--  -->
+            <div class="col-4">
+              <div class="card card-lesson">
+                <div class="card-img-block  lesson-card-img-block">
+                  <img src="./img/lesson-1.jpg" class="card-img-top card-img-top-lesson w-100 h-100" alt="...">
+                  <div class="lesson-video-info lesson-video-info-d-block">
+                    <!-- <div class="lesson-video-free">Бесплатный урок</div> -->
+
+                    <button class="nav-link nav-link-lesson"><img class="video-btn video-btn-lesson"
+                        src="./img/play.png" alt=""></button>
+                  </div>
+                  <div class="lesson-video-p">
+                    <p class="video-text video-name video-name-lesson">Кундалини</p>
+                    <p class="video-text video-time video-time-lesson">20 мин</p>
+                  </div>
+
+
+                  <div class="lesson-video-info lesson-video-info-hover">
+
+                    <div class="lesson-card-content">
+                      <h4 class="lesson-card-title">Описание</h4>
+                      <p class="lesson-card-text">Эта эффективная и веками проверенная практика воздействует сразу на
+                        физическое и тонкое тело (оно отвечает за эмоции и мысли человека)</p>
+                    </div>
+
+                  </div>
+                </div>
+                <!--  -->
+                <div class="card-body card-body-lesson">
+                  <h3 class="lesson-name">Приветствие солнца - Хатха</h3>
+                  <p class="card-text card-text-lesson">Начинающий</p>
+                  <p class="card-text card-text-lesson-bottom ">Резеда Анамова</p>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="col-4">
+              <div class="card card-lesson">
+                <div class="card-img-block  lesson-card-img-block">
+                  <img src="./img/lesson-2.jpg" class="card-img-top card-img-top-lesson w-100 h-100" alt="...">
+                  <div class="lesson-video-info lesson-video-info-d-block">
+                    <!-- <div class="lesson-video-free">Бесплатный урок</div> -->
+
+                    <button class="nav-link nav-link-lesson"><img class="video-btn video-btn-lesson"
+                        src="./img/play.png" alt=""></button>
+                  </div>
+                  <div class="lesson-video-p">
+                    <p class="video-text video-name video-name-lesson">Кундалини</p>
+                    <p class="video-text video-time video-time-lesson">20 мин</p>
+                  </div>
+
+
+                  <div class="lesson-video-info lesson-video-info-hover">
+
+                    <div class="lesson-card-content">
+                      <h4 class="lesson-card-title">Описание</h4>
+                      <p class="lesson-card-text">Эта эффективная и веками проверенная практика воздействует сразу на
+                        физическое и тонкое тело (оно отвечает за эмоции и мысли человека)</p>
+                    </div>
+
+                  </div>
+                </div>
+                <!--  -->
+                <div class="card-body card-body-lesson">
+                  <h3 class="lesson-name">Приветствие солнца - Хатха</h3>
+                  <p class="card-text card-text-lesson">Начинающий</p>
+                  <p class="card-text card-text-lesson-bottom ">Резеда Анамова</p>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="col-4">
+              <div class="card card-lesson">
+                <div class="card-img-block  lesson-card-img-block">
+                  <img src="./img/lesson-3.jpg" class="card-img-top card-img-top-lesson w-100 h-100" alt="...">
+                  <div class="lesson-video-info lesson-video-info-d-block">
+                    <!-- <div class="lesson-video-free">Бесплатный урок</div> -->
+
+                    <button class="nav-link nav-link-lesson"><img class="video-btn video-btn-lesson"
+                        src="./img/play.png" alt=""></button>
+                  </div>
+                  <div class="lesson-video-p">
+                    <p class="video-text video-name video-name-lesson">Кундалини</p>
+                    <p class="video-text video-time video-time-lesson">20 мин</p>
+                  </div>
+
+
+                  <div class="lesson-video-info lesson-video-info-hover">
+
+                    <div class="lesson-card-content">
+                      <h4 class="lesson-card-title">Описание</h4>
+                      <p class="lesson-card-text">Эта эффективная и веками проверенная практика воздействует сразу на
+                        физическое и тонкое тело (оно отвечает за эмоции и мысли человека)</p>
+                    </div>
+
+                  </div>
+                </div>
+                <!--  -->
+                <div class="card-body card-body-lesson">
+                  <h3 class="lesson-name">Приветствие солнца - Хатха</h3>
+                  <p class="card-text card-text-lesson">Начинающий</p>
+                  <p class="card-text card-text-lesson-bottom ">Резеда Анамова</p>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <!--  -->
+            <div class="col-4">
+              <div class="card card-lesson">
+                <div class="card-img-block  lesson-card-img-block">
+                  <img src="./img/lesson-1.jpg" class="card-img-top card-img-top-lesson w-100 h-100" alt="...">
+                  <div class="lesson-video-info lesson-video-info-d-block">
+                    <div class="lesson-video-free">Бесплатный урок</div>
+
+                    <button class="nav-link nav-link-lesson"><img class="video-btn video-btn-lesson"
+                        src="./img/play.png" alt=""></button>
+                  </div>
+                  <div class="lesson-video-p">
+                    <p class="video-text video-name video-name-lesson">Кундалини</p>
+                    <p class="video-text video-time video-time-lesson">20 мин</p>
+                  </div>
+
+
+                  <div class="lesson-video-info lesson-video-info-hover">
+
+                    <div class="lesson-card-content">
+                      <h4 class="lesson-card-title">Описание</h4>
+                      <p class="lesson-card-text">Эта эффективная и веками проверенная практика воздействует сразу на
+                        физическое и тонкое тело (оно отвечает за эмоции и мысли человека)</p>
+                    </div>
+
+                  </div>
+                </div>
+                <!--  -->
+                <div class="card-body card-body-lesson">
+                  <h3 class="lesson-name">Приветствие солнца - Хатха</h3>
+                  <p class="card-text card-text-lesson">Начинающий</p>
+                  <p class="card-text card-text-lesson-bottom ">Резеда Анамова</p>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="col-4">
+              <div class="card card-lesson">
+                <div class="card-img-block  lesson-card-img-block">
+                  <img src="./img/lesson-2.jpg" class="card-img-top card-img-top-lesson w-100 h-100" alt="...">
+                  <div class="lesson-video-info lesson-video-info-d-block">
+                    <!-- <div class="lesson-video-free">Бесплатный урок</div> -->
+
+                    <button class="nav-link nav-link-lesson"><img class="video-btn video-btn-lesson"
+                        src="./img/play.png" alt=""></button>
+                  </div>
+                  <div class="lesson-video-p">
+                    <p class="video-text video-name video-name-lesson">Кундалини</p>
+                    <p class="video-text video-time video-time-lesson">20 мин</p>
+                  </div>
+
+
+                  <div class="lesson-video-info lesson-video-info-hover">
+
+                    <div class="lesson-card-content">
+                      <h4 class="lesson-card-title">Описание</h4>
+                      <p class="lesson-card-text">Эта эффективная и веками проверенная практика воздействует сразу на
+                        физическое и тонкое тело (оно отвечает за эмоции и мысли человека)</p>
+                    </div>
+
+                  </div>
+                </div>
+                <!--  -->
+                <div class="card-body card-body-lesson">
+                  <h3 class="lesson-name">Приветствие солнца - Хатха</h3>
+                  <p class="card-text card-text-lesson">Начинающий</p>
+                  <p class="card-text card-text-lesson-bottom ">Резеда Анамова</p>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="col-4">
+              <div class="card card-lesson">
+                <div class="card-img-block  lesson-card-img-block">
+                  <img src="./img/lesson-3.jpg" class="card-img-top card-img-top-lesson w-100 h-100" alt="...">
+                  <div class="lesson-video-info lesson-video-info-d-block">
+                    <div class="lesson-video-free">Бесплатный урок</div>
+
+                    <button class="nav-link nav-link-lesson"><img class="video-btn video-btn-lesson"
+                        src="./img/play.png" alt=""></button>
+                  </div>
+                  <div class="lesson-video-p">
+                    <p class="video-text video-name video-name-lesson">Кундалини</p>
+                    <p class="video-text video-time video-time-lesson">20 мин</p>
+                  </div>
+
+
+                  <div class="lesson-video-info lesson-video-info-hover">
+
+                    <div class="lesson-card-content">
+                      <h4 class="lesson-card-title">Описание</h4>
+                      <p class="lesson-card-text">Эта эффективная и веками проверенная практика воздействует сразу на
+                        физическое и тонкое тело (оно отвечает за эмоции и мысли человека)</p>
+                    </div>
+
+                  </div>
+                </div>
+                <!--  -->
+                <div class="card-body card-body-lesson">
+                  <h3 class="lesson-name">Приветствие солнца - Хатха</h3>
+                  <p class="card-text card-text-lesson">Начинающий</p>
+                  <p class="card-text card-text-lesson-bottom ">Резеда Анамова</p>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="col-4">
+              <div class="card card-lesson">
+                <div class="card-img-block  lesson-card-img-block">
+                  <img src="./img/lesson-1.jpg" class="card-img-top card-img-top-lesson w-100 h-100" alt="...">
+                  <div class="lesson-video-info lesson-video-info-d-block">
+                    <div class="lesson-video-free">Бесплатный урок</div>
+
+                    <button class="nav-link nav-link-lesson"><img class="video-btn video-btn-lesson"
+                        src="./img/play.png" alt=""></button>
+                  </div>
+                  <div class="lesson-video-p">
+                    <p class="video-text video-name video-name-lesson">Кундалини</p>
+                    <p class="video-text video-time video-time-lesson">20 мин</p>
+                  </div>
+
+
+                  <div class="lesson-video-info lesson-video-info-hover">
+
+                    <div class="lesson-card-content">
+                      <h4 class="lesson-card-title">Описание</h4>
+                      <p class="lesson-card-text">Эта эффективная и веками проверенная практика воздействует сразу на
+                        физическое и тонкое тело (оно отвечает за эмоции и мысли человека)</p>
+                    </div>
+
+                  </div>
+                </div>
+                <!--  -->
+                <div class="card-body card-body-lesson">
+                  <h3 class="lesson-name">Приветствие солнца - Хатха</h3>
+                  <p class="card-text card-text-lesson">Начинающий</p>
+                  <p class="card-text card-text-lesson-bottom ">Резеда Анамова</p>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="col-4">
+              <div class="card card-lesson">
+                <div class="card-img-block  lesson-card-img-block">
+                  <img src="./img/lesson-2.jpg" class="card-img-top card-img-top-lesson w-100 h-100" alt="...">
+                  <div class="lesson-video-info lesson-video-info-d-block">
+                    <div class="lesson-video-free">Бесплатный урок</div>
+
+                    <button class="nav-link nav-link-lesson"><img class="video-btn video-btn-lesson"
+                        src="./img/play.png" alt=""></button>
+                  </div>
+                  <div class="lesson-video-p">
+                    <p class="video-text video-name video-name-lesson">Кундалини</p>
+                    <p class="video-text video-time video-time-lesson">20 мин</p>
+                  </div>
+
+
+                  <div class="lesson-video-info lesson-video-info-hover">
+
+                    <div class="lesson-card-content">
+                      <h4 class="lesson-card-title">Описание</h4>
+                      <p class="lesson-card-text">Эта эффективная и веками проверенная практика воздействует сразу на
+                        физическое и тонкое тело (оно отвечает за эмоции и мысли человека)</p>
+                    </div>
+
+                  </div>
+                </div>
+                <!--  -->
+                <div class="card-body card-body-lesson">
+                  <h3 class="lesson-name">Приветствие солнца - Хатха</h3>
+                  <p class="card-text card-text-lesson">Начинающий</p>
+                  <p class="card-text card-text-lesson-bottom ">Резеда Анамова</p>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="col-4">
+              <div class="card card-lesson">
+                <div class="card-img-block  lesson-card-img-block">
+                  <img src="./img/lesson-3.jpg" class="card-img-top card-img-top-lesson w-100 h-100" alt="...">
+                  <div class="lesson-video-info lesson-video-info-d-block">
+                    <div class="lesson-video-free">Бесплатный урок</div>
+
+                    <button class="nav-link nav-link-lesson"><img class="video-btn video-btn-lesson"
+                        src="./img/play.png" alt=""></button>
+                  </div>
+                  <div class="lesson-video-p">
+                    <p class="video-text video-name video-name-lesson">Кундалини</p>
+                    <p class="video-text video-time video-time-lesson">20 мин</p>
+                  </div>
+
+
+                  <div class="lesson-video-info lesson-video-info-hover">
+
+                    <div class="lesson-card-content">
+                      <h4 class="lesson-card-title">Описание</h4>
+                      <p class="lesson-card-text">Эта эффективная и веками проверенная практика воздействует сразу на
+                        физическое и тонкое тело (оно отвечает за эмоции и мысли человека)</p>
+                    </div>
+
+                  </div>
+                </div>
+                <!--  -->
+                <div class="card-body card-body-lesson">
+                  <h3 class="lesson-name">Приветствие солнца - Хатха</h3>
+                  <p class="card-text card-text-lesson">Начинающий</p>
+                  <p class="card-text card-text-lesson-bottom ">Резеда Анамова</p>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="col-4">
+              <div class="card card-lesson">
+                <div class="card-img-block  lesson-card-img-block">
+                  <img src="./img/lesson-1.jpg" class="card-img-top card-img-top-lesson w-100 h-100" alt="...">
+                  <div class="lesson-video-info lesson-video-info-d-block">
+                    <div class="lesson-video-free">Бесплатный урок</div>
+
+                    <button class="nav-link nav-link-lesson"><img class="video-btn video-btn-lesson"
+                        src="./img/play.png" alt=""></button>
+                  </div>
+                  <div class="lesson-video-p">
+                    <p class="video-text video-name video-name-lesson">Кундалини</p>
+                    <p class="video-text video-time video-time-lesson">20 мин</p>
+                  </div>
+
+
+                  <div class="lesson-video-info lesson-video-info-hover">
+
+                    <div class="lesson-card-content">
+                      <h4 class="lesson-card-title">Описание</h4>
+                      <p class="lesson-card-text">Эта эффективная и веками проверенная практика воздействует сразу на
+                        физическое и тонкое тело (оно отвечает за эмоции и мысли человека)</p>
+                    </div>
+
+                  </div>
+                </div>
+                <!--  -->
+                <div class="card-body card-body-lesson">
+                  <h3 class="lesson-name">Приветствие солнца - Хатха</h3>
+                  <p class="card-text card-text-lesson">Начинающий</p>
+                  <p class="card-text card-text-lesson-bottom ">Резеда Анамова</p>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="col-4">
+              <div class="card card-lesson">
+                <div class="card-img-block  lesson-card-img-block">
+                  <img src="./img/lesson-2.jpg" class="card-img-top card-img-top-lesson w-100 h-100" alt="...">
+                  <div class="lesson-video-info lesson-video-info-d-block">
+                    <div class="lesson-video-free">Бесплатный урок</div>
+
+                    <button class="nav-link nav-link-lesson"><img class="video-btn video-btn-lesson"
+                        src="./img/play.png" alt=""></button>
+                  </div>
+                  <div class="lesson-video-p">
+                    <p class="video-text video-name video-name-lesson">Кундалини</p>
+                    <p class="video-text video-time video-time-lesson">20 мин</p>
+                  </div>
+
+
+                  <div class="lesson-video-info lesson-video-info-hover">
+
+                    <div class="lesson-card-content">
+                      <h4 class="lesson-card-title">Описание</h4>
+                      <p class="lesson-card-text">Эта эффективная и веками проверенная практика воздействует сразу на
+                        физическое и тонкое тело (оно отвечает за эмоции и мысли человека)</p>
+                    </div>
+
+                  </div>
+                </div>
+                <!--  -->
+                <div class="card-body card-body-lesson">
+                  <h3 class="lesson-name">Приветствие солнца - Хатха</h3>
+                  <p class="card-text card-text-lesson">Начинающий</p>
+                  <p class="card-text card-text-lesson-bottom ">Резеда Анамова</p>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="col-4">
+              <div class="card card-lesson">
+                <div class="card-img-block  lesson-card-img-block">
+                  <img src="./img/lesson-3.jpg" class="card-img-top card-img-top-lesson w-100 h-100" alt="...">
+                  <div class="lesson-video-info lesson-video-info-d-block">
+                    <div class="lesson-video-free">Бесплатный урок</div>
+
+                    <button class="nav-link nav-link-lesson"><img class="video-btn video-btn-lesson"
+                        src="./img/play.png" alt=""></button>
+                  </div>
+                  <div class="lesson-video-p">
+                    <p class="video-text video-name video-name-lesson">Кундалини</p>
+                    <p class="video-text video-time video-time-lesson">20 мин</p>
+                  </div>
+
+
+                  <div class="lesson-video-info lesson-video-info-hover">
+
+                    <div class="lesson-card-content">
+                      <h4 class="lesson-card-title">Описание</h4>
+                      <p class="lesson-card-text">Эта эффективная и веками проверенная практика воздействует сразу на
+                        физическое и тонкое тело (оно отвечает за эмоции и мысли человека)</p>
+                    </div>
+
+                  </div>
+                </div>
+                <!--  -->
+                <div class="card-body card-body-lesson">
+                  <h3 class="lesson-name">Приветствие солнца - Хатха</h3>
+                  <p class="card-text card-text-lesson">Начинающий</p>
+                  <p class="card-text card-text-lesson-bottom ">Резеда Анамова</p>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+
+          <div class="more"><button class="btn btn-more">Загрузить больше</button></div>
+
+
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+
+  <footer>
+    <div class="container">
+      <div class="footer-containe">
+        <div class="footer-left">
+          <div class="footer-left-top">
+            <div class="footer-link">
+              <a href="" class="nav-link foot-link">Обратная связь</a>
+              <a href="" class="nav-link foot-link">Условия пользования</a>
+            </div>
+            <p class="footer-descr">© 2020 aiogi. Все права защищены</p>
+          </div>
+          <div class="footer-left-bottom">
+            <a href="" class="footer-social footer-social-1">
+              <img src="./img/footer-1.png" alt="">
+            </a>
+            <a href="" class="footer-social footer-social-2"><img src="./img/footer-2.png" alt=""></a>
+            <a href="" class="footer-social footer-social-3"><img src="./img/footer-3.png" alt=""></a>
+          </div>
+        </div>
+
+        <div class="footer-right">
+          <h3 class="footer-title">Подписаться на рассылку</h3>
+          <p class="footer-text">Будь в курсе самых последний обновлений</p>
+          <form action="">
+            <input type="text" name="" id="" class="footer-input" placeholder="Email">
+            <button class="button btn-primary button-footer">Подписаться</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
